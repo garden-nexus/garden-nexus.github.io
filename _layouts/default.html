@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <div class="content-container">
+      <div class="column column-left">
+        <p>Tags</p>
+      </div>
+    
+      <div class="column column-center">
+      <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </main>
+      </div>
+
+      <div class="column column-right">
+        <div class="block block-top">
+          <p>Repos</p>
+        </div>
+        <div class="block block-bottom">
+          <p>Very Important Links</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-wrapper">
+      {%- include footer.html -%}
+    </div>
+
+  </body>
+
+</html>

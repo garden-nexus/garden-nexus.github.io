@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/assets/images/background-image.jpg');
+  background-size: cover;        /* Scale the background image to cover the entire area */
+  background-position: center;    /* Center the background image */
+  background-repeat: no-repeat;   /* Prevent the background from repeating */
+}
+
+/************************* Header *************************/
+.kw_header_body {
+    margin: 0;
+}
+.kw_header {
+    background-color: #1b491bd5;
+    background-image: url('/assets/images/head-image.gif');
+    background-position: left;    /* Center the background image */
+    background-repeat: no-repeat;   /* Prevent the background from repeating */
+    padding: 20px;
+    text-align: center;
+    grid-template-columns: 1fr 2fr;
+    align-items: center; 
+}
+.kw_header_h1 {
+    color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-size: 55px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.kw_header_img {
+    height: 0px;                 
+    width: auto;
+}
+/************************************************************/
+
+/************************* Navigation Bar *************************/
+.topnav {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.848);
+  }
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .topnav a:hover {
+    background-color: gray;
+    color: black;
+  }
+  .topnav a.active {
+    color: white;
+  }
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .topnav-right {
+    float: right;
+  }
+  /* Responsive navigation menu (for mobile devices) */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+    
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+/*********************************************************************/
+
+/************************* Three Column Containers for Page Content ************************/
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Left and right columns each take up 10% of the page width */
+.column-left, .column-right {
+  width: 17%;              /* Left and right columns are 10% each */
+  background-color: rgba(255, 255, 255, 0.643); /* Light gray background for visual separation */
+  padding: 0 10px;         /* Padding inside the columns */
+  min-height: 100vh;       /* Optional: Ensure the columns stretch to the full page height */
+}
+
+/* Adjusting the block layout in the right column */
+.column-right {
+  display: flex;
+  flex-direction: column;    /* Stack blocks vertically */
+  justify-content: flex-start; /* Align blocks at the start */
+}
+
+/* Center column takes up 80% of the width */
+.column-center {
+  width: 60%;              /* Center column is 80% */
+  background-color: rgba(255, 255, 255, 0.938);   /* White background for the center content */
+  padding: 0 10px;          /* Padding for the center column */
+}
+
+/* Responsive design: stack the columns vertically on small screens */
+@media screen and (max-width: 768px) {
+  .content-container {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+  }
+
+  .column-left, .column-right, .column-center {
+      width: 100%;         /* Each column takes up full width in vertical layout */
+      padding: 10px 0;     /* Adjust padding for smaller screens */
+  }
+}
+/*******************************************************************************************/
+
+/************************* Right column blocks ************************/
+/* Right column blocks */
+.block {
+  background-color: #e1e1e186; /* Light gray background for blocks */
+  /*margin-bottom: 10px;  */     /* Space between the blocks */
+  padding: 10px;              /* Padding inside each block */
+}
+
+/* Adjusting the block layout in the right column */
+.column-right {
+  display: flex;
+  flex-direction: column;    /* Stack blocks vertically */
+  justify-content: space-between; /* Distribute space between blocks */
+}
+
+/* Adding a visible break between blocks */
+.block-top {
+  margin-bottom: 10px;       /* Space below the top block */
+}
+
+.block-bottom {
+  margin-top: 10px;          /* Optional: additional space above the bottom block */
+}
+
+/* Ensure blocks take full width of the right column */
+.block-top, .block-bottom {
+  flex: 1;                   /* Allow blocks to grow and fill space */
+}
+/**********************************************************************/
+
+/************************* Footer Wrapper ************************/
+.footer-wrapper {
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with 70% opacity */
+  color: white; /* Change text color for better contrast */
+  padding: 20px; /* Add some padding for aesthetics */
+  text-align: center; /* Center the footer text */
+}
+/*****************************************************************/

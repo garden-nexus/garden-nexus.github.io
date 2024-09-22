@@ -1,0 +1,27 @@
+---
+layout: post
+title:  Idea Dump No. 1
+date:   2024-09-22
+categories: ideas
+---
+
+Initial idea dump for Garden Nexus - _always changing and growing_:
+- Personalized home garden database: growing conditions, when to plant/seed/transplant (optimized as time passes)
+  - Could utilize a large array of Thread-based sensors for this data collection
+  - "When should I start this plant? How fast will it grow? Is it getting enough light? How bad did the hurricane effect it?"
+- Daily reporter for both thread/zigbee garden sensors
+  - A dashboard of sorts; could possibly be a wall hung console; email push notifications?
+- N-P-K (Nitrogen, Phosphorus, and Potassium) MTD sensor
+  - Able to measure runoff from lawn into local waterways, along with the current soil conditions for the garden
+- Rainwater capture with MTD water valve for drip irrigation for fruit trees
+  - Drip irrigation for water-dependent fruit trees during the summer; where it rains briefly everyday, but it's not sustainable to constantly water multiple times a day due to the heat
+- Natively re-integrate Ambient Weather with SmartThings platform
+  - Ambient Weather utilized the old groovy drivers, but they have since been deprecated ([link](https://ambientweather.com/faqs/question/view/id/1884/?srsltid=AfmBOoqW9WTqedltlvoU9ZxAYvHaZ3pARdmbe0uvIVr4d8HiHhfWKpqP), [repo](https://github.com/KurtSanders/STAmbientWeather))
+  - Local weather and climate modeling to help make better use of garden mesh devices on the platform (i.e. “should you water the garden today or let nature do it?”)
+- The heavily underutilized Zigbee Green Power spec for a garden sensor-suite powered by a solar panel implementation
+  - A battery-less device with bidirectional communication with the zigbee router that runs as much as 3 times a day (morning, noon, night)
+  - Possible need a workaround for holding the security material in RAM during sleep
+- An Edge-AI camera for disease and pest detection on garden plants, along with a butterfly life cycle tracking implementation for monarch conservation
+  - The San Diego Zoo Conversation Technology Lab has done an awesome job, putting something like this together ([scrubcam](https://github.com/conservationtechlab/scrubcam)), but there can be a utility for it in a mesh network.
+- Thread and Zigbee Garden Controller: investigation into range of these outdoor devices to the mesh networks and it's effect on power consumption / connectivity
+  - Thread: `FTD`/`Router`, Zigbee: `Router`, make use of a radio co-processor

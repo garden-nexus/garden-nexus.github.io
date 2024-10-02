@@ -8,11 +8,19 @@
     {%- include header.html -%}
 
     <div class="content-container">
-      <div class="column column-left">
-        <p>Tags</p>
+      <div class="column-left">
+        <h3>Categories</h3>
+        <ul>
+          {% assign unique_categories = site.posts | map: 'categories' | uniq | sort %}
+            {% for category in unique_categories %}
+              {% for cat in category %}
+                <li><a href="/categories/{{ cat | slugify }}/">{{ cat }}</a></li>
+              {% endfor %}
+            {% endfor %}
+        </ul>
       </div>
     
-      <div class="column column-center">
+      <div class="column-center">
       <main class="page-content" aria-label="Content">
         <div class="wrapper">
           {{ content }}
@@ -20,12 +28,26 @@
       </main>
       </div>
 
-      <div class="column column-right">
+      <div class="column-right">
         <div class="block block-top">
-          <p>Repos</p>
+          <div class="top-block">
+            <h2>Repositories</h2>
+            <ul>
+                <li><a href="https://github.com/garden-nexus/st-ambient-weather" target="_blank">st-ambient-weather</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
         </div>
         <div class="block block-bottom">
-          <p>Very Important Links</p>
+          <h2>Additional Links</h2>
+            <h3>Highlights</h3>
+              <ul>
+                <li><a href="https://fl.audubon.org/" target="_blank">Audubon Florida</a></li>
+                <li><a href="https://www.floridaspringscouncil.org/springs-organizations" target="_blank">Florida Springs Council</a></li>
+                <li><a href="https://ideasforus.org/mission/" target="_blank">IDEAS For Us</a></li>
+                <li><a href="https://sfyl.ifas.ufl.edu/who-we-are/about-extension/" target="_blank">UF/IFAS Extension</a></li>
+                <!-- Add more links as needed -->
+              </ul>
         </div>
       </div>
     </div>

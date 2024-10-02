@@ -2,7 +2,7 @@
 layout: post
 title:  "On this organization"
 date:   2024-09-21
-categories: milestone
+categories: Milestones
 ---
 
 Recently, I’ve been having a lot of conversations with friends about finding that thing in life that really drives you with regards to a career. 

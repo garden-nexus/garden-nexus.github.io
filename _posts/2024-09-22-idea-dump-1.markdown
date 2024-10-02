@@ -2,7 +2,7 @@
 layout: post
 title:  Idea Dump No. 1
 date:   2024-09-22
-categories: ideas
+categories: Ideas
 ---
 
 Initial idea dump for Garden Nexus - _always changing and growing_:
